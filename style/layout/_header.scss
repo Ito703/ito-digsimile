@@ -1,0 +1,126 @@
+.header{
+    position: absolute;
+    top: 30px;
+    left: 58px;
+    right: 58px;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo{
+        width: 260px;
+        flex-shrink: 0;
+        a{
+            @include hover;
+        }
+    }
+
+    &__menu{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(#222222, .6);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 600;
+        transform: translateX(100%);
+        transition: transform .5s;
+
+        &.is-active{
+            transform: translateX(0);
+        }
+
+        nav{
+            height: 100vh;
+            width: 520px;
+            background-color: rgba(#222222, .95);
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: center;
+            padding-top: 180px;
+
+            i{
+                width: 42px;
+            }
+
+            ul {
+                margin-top: 40px;
+                > li{
+                    margin-top: 30px;
+                    &:nth-child(-n + 1){
+                        margin-top: 0;
+                    }
+
+                    a{
+                        font-size: 2.0rem;
+                        font-weight: 900;
+                        font-family: $montserrat;
+                        color: #FFF;
+                        @include hover;
+                    }
+                }
+            }
+        }
+    }
+
+    &__toggle{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 700;
+        position: relative;
+
+        &.is-active {
+            > div span{
+                &:nth-child(1){
+                    top: 50%;
+                    transform: translateY(-50%) rotate(30deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:nth-child(3){
+                    bottom: auto;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-30deg);
+                }
+            }
+        }
+
+        > div{
+            width: 26px;
+            height: 14px;
+            position: relative;
+
+            span{
+                height: 2px;
+                width: 100%;
+                background-color: #FFF;
+                position: absolute;
+                transition: all .3s;
+
+                &:nth-child(1){
+                    top: 0;
+                }
+                &:nth-child(2){
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:nth-child(3){
+                    bottom: 0;
+                }
+            }
+        }
+
+        > span{
+            font-size: 1.0rem;
+            color: #FFF;
+            font-family: $montserrat;
+            font-weight: 900;
+            margin-left: 7px;
+            letter-spacing: 0.005em;
+        }
+    }
+}

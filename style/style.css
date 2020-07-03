@@ -1,0 +1,638 @@
+@charset "UTF-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #282F35;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.inner {
+  max-width: 1100px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .inner {
+    max-width: inherit;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sp {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sp {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pc {
+    display: block !important;
+  }
+}
+
+.header {
+  position: absolute;
+  top: 30px;
+  left: 58px;
+  right: 58px;
+  z-index: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  width: 260px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.header__logo a {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__logo a:hover {
+  opacity: .7;
+}
+
+.header__menu {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 600;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.header__menu.is-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.header__menu nav {
+  height: 100vh;
+  width: 520px;
+  background-color: rgba(34, 34, 34, 0.95);
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  padding-top: 180px;
+}
+
+.header__menu nav i {
+  width: 42px;
+}
+
+.header__menu nav ul {
+  margin-top: 40px;
+}
+
+.header__menu nav ul > li {
+  margin-top: 30px;
+}
+
+.header__menu nav ul > li:nth-child(-n + 1) {
+  margin-top: 0;
+}
+
+.header__menu nav ul > li a {
+  font-size: 2.0rem;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  color: #FFF;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__menu nav ul > li a:hover {
+  opacity: .7;
+}
+
+.header__toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 700;
+  position: relative;
+}
+
+.header__toggle.is-active > div span:nth-child(1) {
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(30deg);
+          transform: translateY(-50%) rotate(30deg);
+}
+
+.header__toggle.is-active > div span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__toggle.is-active > div span:nth-child(3) {
+  bottom: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-30deg);
+          transform: translateY(-50%) rotate(-30deg);
+}
+
+.header__toggle > div {
+  width: 26px;
+  height: 14px;
+  position: relative;
+}
+
+.header__toggle > div span {
+  height: 2px;
+  width: 100%;
+  background-color: #FFF;
+  position: absolute;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__toggle > div span:nth-child(1) {
+  top: 0;
+}
+
+.header__toggle > div span:nth-child(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.header__toggle > div span:nth-child(3) {
+  bottom: 0;
+}
+
+.header__toggle > span {
+  font-size: 1.0rem;
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  margin-left: 7px;
+  letter-spacing: 0.005em;
+}
+
+.footer {
+  background-color: #525252;
+  text-align: center;
+  padding: 19px 0 18px;
+}
+
+.footer small {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.0rem;
+  letter-spacing: 0.0015em;
+  color: #FFF;
+}
+
+body.index .mv {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+body.index .mv:before {
+  content: '';
+  width: 54.1666667%;
+  height: 100%;
+  background-color: #222222;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+body.index .mv__img {
+  background-image: url(../img/index/mv.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 76.3888889%;
+  height: calc(100vh - 100px);
+}
+
+body.index .mv__heading {
+  position: absolute;
+  right: 13.4722222%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body.index .mv__heading small {
+  display: block;
+  margin-bottom: 10px;
+}
+
+body.index .mv__heading small span {
+  display: block;
+  color: #FFF;
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+
+body.index .mv__heading small .ja {
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+body.index .mv__heading small .en {
+  font-family: "Montserrat", sans-serif;
+}
+
+body.index .mv__heading em {
+  font-size: 7.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #FFF;
+  font-weight: 900;
+  line-height: 1.194444444;
+  font-style: normal;
+}
+
+body.index .mv__scroll {
+  position: absolute;
+  left: 60px;
+  bottom: 5px;
+}
+
+body.index .mv__scroll:before, body.index .mv__scroll:after {
+  content: '';
+  width: 1px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body.index .mv__scroll:before {
+  top: -127px;
+  height: 118px;
+  background-color: #000;
+}
+
+@-webkit-keyframes scrool {
+  0% {
+    height: 0;
+    top: -127px;
+    bottom: 100%;
+  }
+  50% {
+    top: -127px;
+    height: 118px;
+  }
+  100% {
+    top: calc(100% + (-127px));
+    top: -9px;
+    height: 0px;
+    bottom: 0;
+  }
+}
+
+@keyframes scrool {
+  0% {
+    height: 0;
+    top: -127px;
+    bottom: 100%;
+  }
+  50% {
+    top: -127px;
+    height: 118px;
+  }
+  100% {
+    top: calc(100% + (-127px));
+    top: -9px;
+    height: 0px;
+    bottom: 0;
+  }
+}
+
+body.index .mv__scroll:after {
+  background-color: #FFF;
+  -webkit-animation: 2s scrool infinite;
+          animation: 2s scrool infinite;
+}
+
+body.index section p {
+  font-size: 1.6rem;
+  line-height: 2;
+  text-align: justify;
+}
+
+body.index .about {
+  padding-top: 120px;
+}
+
+body.index .about .inner > div {
+  background-image: url(../img/index/about-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 110px 50px 110px 50px;
+}
+
+body.index .about__box {
+  max-width: 590px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px 50px 30px;
+}
+
+body.index .about__box p {
+  padding: 30px 0 30px;
+}
+
+body.index .column-two {
+  background-color: #F0F0F0;
+  position: relative;
+}
+
+body.index .column-two:before {
+  content: '';
+  width: 100%;
+  height: 100px;
+  background-color: #F0F0F0;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: -1;
+}
+
+body.index .column-two .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 80px 0 60px;
+}
+
+body.index .column-two .inner section {
+  width: calc((100% - 60px) / 2);
+}
+
+body.index .column-two .inner section .img {
+  margin: 30px 0 25px;
+}
+
+body.index .column-two .inner section p {
+  margin: 25px 0 25px;
+}
+
+body.index .topics {
+  padding: 60px 0 60px;
+}
+
+body.index .topics .inner nav {
+  max-width: 700px;
+  width: 100%;
+  margin: 30px 0 0 auto;
+  text-align: right;
+}
+
+body.index .topics .inner nav ul {
+  text-align: left;
+}
+
+body.index .topics .inner nav ul > li {
+  margin-top: 30px;
+  border-bottom: #DDDDDD solid 1px;
+}
+
+body.index .topics .inner nav ul > li:nth-child(-n + 1) {
+  margin-top: 0;
+}
+
+body.index .topics .inner nav ul > li a {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+body.index .topics .inner nav ul > li a:hover {
+  opacity: .7;
+}
+
+body.index .topics .inner nav ul > li a time {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.0rem;
+  letter-spacing: 0.015em;
+  font-weight: bold;
+  color: #CECECE;
+}
+
+body.index .topics .inner nav ul > li a p {
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.004em;
+  padding: 10px 0 5px;
+}
+
+body.index .topics .inner .button {
+  margin-top: 30px;
+}
+
+body.index .contact {
+  background-color: #F2F2F2;
+  padding: 60px 0 120px;
+}
+
+body.index .contact .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.index .contact__left {
+  width: 47.2%;
+  padding-right: 80px;
+}
+
+body.index .contact__left p {
+  margin: 30px 0 30px;
+}
+
+body.index .contact__right {
+  width: 52.7%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.sec-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 3.2rem;
+  letter-spacing: 0.068em;
+}
+
+.button {
+  display: inline-block;
+  width: 160px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.015em;
+  text-align: center;
+  background-color: #000;
+  padding: 12px 0 11px;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  border: #000 solid 1px;
+}
+
+.button:hover {
+  background-color: #FFF;
+  color: #000;
+}
+/*# sourceMappingURL=style.css.map */
