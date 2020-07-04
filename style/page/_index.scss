@@ -13,6 +13,9 @@ body.index{
             right: 0;
             top: 0;
             z-index: -1;
+            @media screen and (max-width: 767px) {
+                width: 75.4666667%;
+            }
         }
 
         &__img{
@@ -22,22 +25,40 @@ body.index{
             background-position: center;
             width: 76.3888889%;
             height: calc(100vh - 100px);
-            // background-image: url(../img/mv-sp.jpg);
+
+            @media screen and (max-width: 767px) {
+                background-image: url(../img/index/mv-sp.jpg);
+                height: 86.9565217%;
+                width: 76.5333333%;
+            }
         }
         &__heading{
             position: absolute;
             right: 13.4722222%;
             top: 50%;
             transform: translateY(-50%);
+
+            @media screen and (max-width: 767px) {
+                right: 20px;
+            }
+
             small{
                 display: block;
                 margin-bottom: 10px;
+
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 20px;
+                }
 
                 span{
                     display: block;
                     color: #FFF;
                     font-size: 2.0rem;
                     font-weight: bold;
+
+                    @media screen and (max-width: 767px) {
+                        font-size: 1.6rem;
+                    }
                 }
                 .ja{
                     font-family: $gothic;
@@ -54,6 +75,11 @@ body.index{
                 font-weight: 900;
                 line-height: 1.194444444;
                 font-style: normal;
+
+                @media screen and (max-width: 767px) {
+                    font-size: 5.6rem;
+                    line-height: 0.946428571;
+                }
             }
         }
 
@@ -108,11 +134,23 @@ body.index{
             font-size: 1.6rem;
             line-height: 2;
             text-align: justify;
+
+            @media screen and (max-width: 767px) {
+                text-align: left;
+            }
         }
     }
 
     .about{
         padding-top: 120px;
+
+        @media screen and (max-width: 767px) {
+            padding-top: 78px;
+
+            .inner{
+                width: 100%;
+            }
+        }
 
         .inner > div{
             background-image: url(../img/index/about-img.jpg);
@@ -121,12 +159,22 @@ body.index{
             background-position: center;
             padding: 110px 50px 110px 50px;
 
+            @media screen and (max-width: 767px) {
+                background-image: url(../img/index/about-img-sp.jpg);
+                padding: 50px 15px;
+                width: 100%;
+            }
+
         }
         &__box{
             max-width: 590px;
             width: 100%;
             background-color: rgba(#FFFFFF, .95);
             padding: 30px 50px 30px;
+
+            @media screen and (max-width: 767px) {
+                padding: 50px 15px 50px 30px;
+            }
 
             p {
                 padding: 30px 0 30px;
@@ -147,16 +195,27 @@ body.index{
             top: -100px;
             left: 0;
             z-index: -1;
+            @media screen and (max-width: 767px) {
+                content: none;
+            }
         }
 
         .inner{
-            display: flex;
-            justify-content: space-between;
-            padding: 80px 0 60px;
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+                padding: 80px 0 60px;
+            }
 
+            @media screen and (max-width: 767px) {
+                padding: 40px 0;
+            }
 
             section{
                 width: calc((100% - 60px) / 2);
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                }
 
                 .img{
                     margin: 30px 0 25px;
@@ -164,12 +223,22 @@ body.index{
                 p{
                     margin: 25px 0 25px;
                 }
+
+                @media screen and (max-width: 767px) {
+                    &.culture{
+                        margin-top: 40px;
+                    }
+                }
             }
         }
     }
 
     .topics{
         padding: 60px 0 60px;
+
+        @media screen and (max-width: 767px) {
+            padding: 40px 0 40px;
+        }
 
         .inner{
 
@@ -179,12 +248,20 @@ body.index{
                 margin: 30px 0 0 auto;
                 text-align: right;
 
+                @media screen and (max-width: 767px) {
+                    text-align: left;
+                }
+
                 ul{
                     text-align: left;
 
                     > li {
                         margin-top: 30px;
                         border-bottom: #DDDDDD solid 1px;
+
+                        @media screen and (max-width: 767px) {
+                            margin-top: 20px;
+                        }
 
                         &:nth-child(-n + 1){
                             margin-top: 0;
@@ -205,6 +282,12 @@ body.index{
                                 font-weight: bold;
                                 letter-spacing: 0.004em;
                                 padding: 10px 0 5px;
+
+                                @media screen and (max-width: 767px) {
+                                    font-size: 1.2rem;
+                                    letter-spacing: 0.068em;
+                                    padding: 7px 0 3px;
+                                }
                             }
                         }
                     }
@@ -221,22 +304,36 @@ body.index{
         background-color: #F2F2F2;
         padding: 60px 0 120px;
 
+        @media screen and (max-width: 767px) {
+            padding: 40px 0 40px;
+        }
+
         .inner{
             display: flex;
             align-items: center;
+            @media screen and (max-width: 767px) {
+                flex-direction: column-reverse;
+            }
         }
         &__left{
-            width: 47.2%;
-            padding-right: 80px;
+            @media screen and (min-width: 768px) {
+                width: 47.2%;
+                padding-right: 80px;
+            }
+            @media screen and (max-width: 767px) {
+                margin-top: 30px;
+            }
 
             p{
-                margin: 30px 0 30px;
+                margin: 25px 0 25px;
             }
         }
 
         &__right{
-            width: 52.7%;
-            flex-shrink: 0;
+            @media screen and (min-width: 768px) {
+                width: 52.7%;
+                flex-shrink: 0;
+            }
         }
     }
 
